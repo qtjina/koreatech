@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>한국기술교육대학교</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<body>
+    <header id="header_box">
+        <div class="header">
+            <img src="images/logo.jpg" alt="logo" id="logo" width="200">
+            <ul id="top_menu">
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">SITEMAP</a></li>
+                <li><a href="#">ENG</a></li>
+            </ul>
+            <div id="nav">
+                <ul>
+                    <li><a href="sub1.html">대학소개</a></li>
+                    <li><a href="#">입학안내</a></li>
+                    <li><a href="sub2.html">대학/대학원</a></li>
+                    <li><a href="#">대학생활</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">정보공개</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    	<section class="slider">
+		<div class="sliders">
+			<img src="images/banner2.jpg" alt="1">
+			<img src="images/banner3.jpg" alt="2">
+			<img src="images/banner4.jpg" alt="3">
+		</div>
+	</section>
+<!--	<button class="btn">next</button>-->
+	
+	<script>
+		$(function(){
+			var count = 1;	// 이미지 번호
+			var img_num = 3;	// 이미지 개수
+			
+			function slider(){
+				if(count > img_num-1) count = 0; // 처음 이미지로
+				var w = 100*count; // 1*100
+				console.log(count);
+				count++; // 이미지 번호 증가
+				
+				 $('.sliders')
+					.animate({
+						marginLeft: -w + '%'
+				 	});
+			}
+			// 자동 재생
+			setInterval(slider, 3500);
+			$('.btn').on('click', function(){
+				slider();
+			});
+		});
+		
+	</script>
+			
+    <main>
+        <aside id="sidebar">
+            <ul>
+                <li><a href="#"><img src="images/sidebar1.png" alt="">학사종합서비스</a></li>
+                <li><a href="#"><img src="images/sidebar2.png" alt="">인터넷증명발급</a></li>
+                <li><a href="#"><img src="images/sidebar3.png" alt="">학사일정</a></li>
+                <li><a href="#"><img src="images/sidebar4.png" alt="">학과안내</a></li>
+                <li><a href="#"><img src="images/sidebar5.png" alt="">온라인교육</a></li>
+            </ul>
+        </aside>
+        <div id="banner"></div>
+        <div id="page">
+            <section id="info">
+                <article id="notice1">
+                    <h3>일반공지</h3>
+                        <ul>
+                            <li>[마감]단기근로장학생 모집(7.13 금)</li>
+                            <li>[온라인평생교육원]이러닝 콘텐츠 검수지원 상주</li>
+                            <li>[공쎈]2018 KOREATECH 공학설계 캠프 참가자</li>
+                            <li>[능력개발교육원]이러닝콘텐츠 검수 근로장학생</li>
+                            <li>[전전통]2018학년도 전공배정결과 알림</li>
+                        </ul>
+                </article>
+                <article id="notice2">
+                    <h3>학사공지</h3>
+                        <ul>
+                            <li>2018학년도 2학기 재입학 및 복적 허가 안내</li>
+                            <li>2018학년도 여름계절학기 일반화학 강의설명</li>
+                            <li>2018학년도 하계 현장기술 교과운영 안내</li>
+                            <li>[MEB201 공학제도및CAD 03분반] 고사장 변경</li>
+                            <li>에너지시스템공학(정용주 교수님) 보강 알림</li>
+                        </ul>
+                </article>
+                <article id="notice3">
+                    <h3>KOREATECH NEWS</h3>
+                        <ul>
+                            <li>기계공학부 연구팀,'유로햅틱스 2018' 최종결승 기염</li>
+                            <li>생활관 학생들, 목천지역아동센터에 물품 기증</li>
+                            <li>코리아텍 '혁신경영 선포식' 개최</li>
+                            <li>코리아텍 학생들 캄포디아서 '기술교육봉사'</li>
+                            <li>[월간 인재경영 7월호]북한인적자원개발포럼</li>
+                        </ul>
+                </article>
+            </section>
+        </div>
+    </main>
+        
+        
+        <footer>
+        <div id="footer_box">
+            <section class="box">
+            <div id="select">
+                <select name="" id="select_menu">
+                    <option selected="selected">대학/대학원</option>
+                    <option value="">기계공학부</option>
+                    <option value="">메카트로닉스공학부</option>
+                    <option value="">전기전자통신공학부</option>
+                    <option value="">컴퓨터공학부</option>
+                    <option value="">디자인공학전공</option>
+                    <option value="">건축공학전공</option>
+                    <option value="">산업경영학부</option>
+                    <option value="">교양학부</option>
+                </select>
+                <select name="" id="select_menu">
+                    <option value="" focus>주요사이트</option>
+                    <option value="">다음 공식카페</option>
+                    <option value="">네이버 블로그</option>
+                    <option value="">학사종합서비스</option>
+                    <option value="">온라인교육지원</option>
+                    <option value="">사람인</option>
+                    <option value="">고용부 워크넷</option>
+                </select>
+                <select name="" id="select_menu">
+                    <option value="" focus>교내주요기관</option>
+                    <option value="">고용노동연수원</option>
+                    <option value="">능력개발교육원</option>
+                    <option value="">직업능력심사평가원</option>
+                    <option value="">산학협력단</option>
+                    <option value="">생활관</option>
+                    <option value="">HRD센터</option>
+                    <option value="">사회봉사센터</option>
+                </select>
+                <select name="" id="select_menu">
+                    <option value="" focus>학생자치단체</option>
+                    <option value="">총학생회</option>
+                    <option value="">총동아리연합회</option>
+                    <option value="">코리아텍방송국</option>
+                    <option value="">생활관자치회</option>
+                </select>
+                <select name="" id="select_menu">
+                    <option value="" focus>대외유관기관</option>
+                    <option value="">고용노동부</option>
+                    <option value="">산업통상자원부</option>
+                    <option value="">근로복지공단</option>
+                    <option value="">교과부</option>
+                    <option value="">한국산업인력공단</option>
+                </select>
+			</div>
+            </section>
+            <section class="copyright">
+                <ul id="footer_menu">
+                    <li>개인정보처리방침</li>
+                    <li>이메일무단수집거부</li>
+                    <li>윤리헌장</li>
+                    <li>행정서비스헌장</li>
+                    <li>대학정보공시</li>
+                </ul>
+                <hr>
+                <ul id="copyright">
+                    <li>(31253) 충청남도 천안시 동남구 병천면 충절로 1600(가전리, 한국기술교육대학교 Tel.041-560-1114</li>
+                    <li>Copyrightⓒ2018 KOREATECH. All rights reserved.</li>
+                </ul>
+            </section>
+        </div>
+        </footer>
+</body>
+</html>
